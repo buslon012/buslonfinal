@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(rcs.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+h1,h2,h5{
+color: #fff; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d40000;
+}
+/* Slideshow container */
+.slideshow-container {
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  border: 5px solid #fff;
+}
+.slideshow img{
+  width: 560px;
+  height: 315px;
+  position: relative    ;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.logo img {
+    width: 100px;
+    height: auto;
+}
+.login-form, .search-bar {
+    margin: 0 10px;
+}
+.gallery {
+    padding: 20px;
+    display: flex;
+    text-align: center;    
+}
+.gallery img{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+.gallery-grid {
+    width: 100%;
+    height: auto;    
+}
+div.gallery{
+    border: 0.5px solid #fff;
+    background-color: #d40000;
+}
+.desc{
+    color: #fff;
+}
+.map{
+    float: inline-start;
+}
+.map h2{
+    margin-left: 100px;
+}
+.map img {
+    height: 315px;
+    margin-right: 200px;
+    margin-left: 100px;
+}
+footer {
+    background-color: #d40000;
+    padding: 20px;
+    text-align: center;
+}
+.fa-facebook { 
+  color: white;
+}
+.fa-twitter {
+  color: white;
+}
+.fa-linkedin { 
+  color: white;
+}
+.fa-instagram { 
+  color: white;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="rcs3.png"></a>
+            <h1>Red Cross Information System</h1>
+        </div>
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" >
+                <input type="password" placeholder="Password" >
+                <button type="submit"><a href="dashboard.html"> Login</a></button>
+            </form>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+            <section class="slideshow">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="healthcare_1.png" style="width:100%">
+                      <div class="text">Red Cross Information System aims to provide centralized platform for managing various aspects of their work, including blood donation, community outreach, and disaster response.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="healthcare_2.jpg" style="width:100%">
+                      <div class="text">It is design to enhance and streamline the operation of the Red Cross Organization.</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="healthcare_3.jpg" style="width:100%">
+                      <div class="text">It will leverage technology to connect beneficiaries, volunteers, and donors, fostering a more effective and efficient response to humanitarian needs.</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2>Gallery</h2>
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="pama.jpg">
+                      <img src="pama.jpg" alt="pama" width="600" height="400">
+                      <h5>Patient Management</h5>
+                    </a>
+                    <div class="desc">RCIS enables comprehensive trackingof patient information,including medical history and treatment plans, ensuring accurate and secure records throughout the care process.</div>
+                  </div>
+                </div>
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="offu.jpg">
+                      <img src="offu.jpg" alt="offu" width="600" height="400">
+                      <h5>Offline Functionality</h5>
+                    </a>
+                    <div class="desc">RCIS can operate without internet connectivity,ensuring that medical personnel can continue to document and access critical information even in remote or disaster-affected areas.</div>
+                  </div>
+                </div>
+
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="dasy.jpg">
+                      <img src="dasy.png" alt="dasy" width="600" height="400">
+                      <h5>Data Synchronization</h5>
+                    </a>
+                    <div class="desc">Patient data is securely stored on Microsoft Azure and synchronized with local servers, allowing for efficient data management and accessibility.</div>
+                  </div>
+                </div>
+
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="iris.jpg">
+                      <img src="iris.jpg" alt="irispama" width="600" height="400">
+                      <h5>Risk Management</h5>
+                    </a>
+                    <div class="desc">A chemical evaluation program that supports risk assessment by providing access to health hazard information regarding environmental chemicals.</div>
+                  </div>
+                </div>
+            </section>
+
+    <section class="map">
+        <h2>Our Location</h2>
+        <div><img src="map.png"></div>
+    </section>
+
+    <section class="video">
+        <h2>Watch Our Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <h2>Follow Us</h2>
+        <div class="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+</script>
+</body>
+</html>
